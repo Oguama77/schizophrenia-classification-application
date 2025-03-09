@@ -102,13 +102,13 @@ def main():
             height: 50px !important;
             min-height: 50px !important;
             }
-            button[title^=Exit]+div [data-testid=stImage]{
+        button[title^=Exit]+div [data-testid=stImage]{
             text-align: center;
             display: block;
             margin-left: auto;
             margin-right: auto;
             width: 100%;
-        }
+            }
         </style>
         """,
         unsafe_allow_html=True
