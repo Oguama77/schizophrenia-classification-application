@@ -97,10 +97,17 @@ def main():
     st.markdown(
         """
         <style>
-        /* Adjust the height of the text area */
+        /* Adjust the height of the text area and the image display */
         div[data-testid="stTextArea"] textarea {
             height: 50px !important;
             min-height: 50px !important;
+            }
+            button[title^=Exit]+div [data-testid=stImage]{
+            text-align: center;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
         }
         </style>
         """,
