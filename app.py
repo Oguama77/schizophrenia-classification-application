@@ -107,13 +107,16 @@ def main():
         unsafe_allow_html=True
     )
 
-    # Adding elements to the first column
+    # Define images
     logo = "logo.png"
+    mri = "mri.png"
+    
     st.logo(logo, size="large")
     
     st.markdown(
-    "<h1 style='text-align: center;'>Schizophrenia Detection from 3D MRI Scans 🩻</h1>", 
+    "<h1 style='text-align: center;'>Schizophrenia Detection from 3D MRI Scans</h1>", 
     unsafe_allow_html=True)
+    st.image(mri)
     
     st.write("")
     st.write("Upload a 3D MRI scan in NIfTI format (.nii, .nii.gz, or .zip) to check for schizophrenia.")
