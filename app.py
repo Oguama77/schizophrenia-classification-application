@@ -110,11 +110,14 @@ def main():
     # Define images
     logo = "logo.png"
     mri = "mri.jpg"
-
+    
     st.logo(logo, size="large")
+    
+    st.markdown(
+    "<h1 style='text-align: center;'>Schizophrenia Detection from 3D MRI Scans</h1>", 
+    unsafe_allow_html=True)
 
 # Display the centered image using st.markdown
-    st.markdown(mri, unsafe_allow_html=True)
     st.image(mri, width=300)
     
     st.write("")
