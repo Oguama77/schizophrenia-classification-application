@@ -102,13 +102,6 @@ def main():
             height: 50px !important;
             min-height: 50px !important;
             }
-        button[title^=Exit]+div [data-testid=stImage]{
-            text-align: center;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 100%;
-            }
         </style>
         """,
         unsafe_allow_html=True
@@ -135,7 +128,7 @@ def main():
     model_path = "resnet50_schizophrenia4.pth"
     model = load_model(model_path)
 
-    uploaded_file = st.file_uploader("Upload a NIfTI file (.nii, .nii.gz) or ZIP containing a NIfTI file", 
+    uploaded_file = st.file_uploader("", 
                                      type=["nii", "nii.gz", "zip"])
     if uploaded_file is not None:
         with tempfile.TemporaryDirectory() as temp_dir:
