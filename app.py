@@ -124,7 +124,8 @@ def main():
     """
 
 # Display the centered image using st.markdown
-    st.markdown(centered_image, unsafe_allow_html=True)
+    st.markdown(mri, unsafe_allow_html=True)
+    st.image(mri, width=300)
     
     st.write("")
     st.write("Upload a 3D MRI scan in NIfTI format (.nii, .nii.gz, or .zip) to check for schizophrenia.")
