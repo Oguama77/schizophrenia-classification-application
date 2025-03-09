@@ -95,7 +95,7 @@ def main():
     
     # Adding elements to the first column
     logo = "logo.png"
-    st.logo(logo, size="medium")
+    st.logo(logo, size="large")
     
     st.title("Schizophrenia Detection from 3D MRI Scans")
     st.write("Upload a 3D MRI scan in NIfTI format (.nii, .nii.gz, or .zip) to check for schizophrenia.")
