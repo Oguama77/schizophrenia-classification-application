@@ -109,7 +109,7 @@ def main():
 
     # Define images
     logo = "logo.png"
-    mri = "mri.png"
+    mri = "mri.jpg"
     
     st.logo(logo, size="large")
     
