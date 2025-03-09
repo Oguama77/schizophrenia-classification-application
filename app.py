@@ -93,11 +93,28 @@ def main():
         initial_sidebar_state="collapsed",
     )
     
+    # set default text area size for Streamlit with CSS
+    st.markdown(
+        """
+        <style>
+        /* Adjust the height of the text area */
+        div[data-testid="stTextArea"] textarea {
+            height: 50px !important;
+            min-height: 50px !important;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
     # Adding elements to the first column
     logo = "logo.png"
     st.logo(logo, size="large")
     
-    st.title("Schizophrenia Detection from 3D MRI Scans")
+    st.markdown(
+    "<h1 style='text-align: center;'>Schizophrenia Detection from 3D MRI Scans 🩻</h1>", 
+    unsafe_allow_html=True
+    st.write("")
     st.write("Upload a 3D MRI scan in NIfTI format (.nii, .nii.gz, or .zip) to check for schizophrenia.")
 
     model_path = "resnet50_schizophrenia4.pth"
