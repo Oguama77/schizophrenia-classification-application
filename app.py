@@ -124,8 +124,10 @@ def main():
     "<h1 style='text-align: center;'>Schizophrenia Detection from 3D MRI Scans</h1>", 
     unsafe_allow_html=True)
 
-# Display the centered image using st.markdown
-    st.image(mri, width=300)
+# Display the centered image
+    left_co, cent_co,last_co = st.columns(3)
+    with cent_co:
+        st.image(mri, width=300)
     
     st.write("")
     st.write("Upload a 3D MRI scan in NIfTI format (.nii, .nii.gz, or .zip) to check for schizophrenia.")
