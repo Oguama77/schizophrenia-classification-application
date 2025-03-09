@@ -87,6 +87,9 @@ def predict(model, input_tensors):
 # Streamlit app
 def main():
     # Streamlit app setup
+    # define logo
+    logo = "logo.png"
+    st.logo(logo, size="large")
     st.set_page_config(
         page_title="Schiz-Classification-App",
         layout="centered",
@@ -99,20 +102,17 @@ def main():
         <style>
         /* Adjust the height of the text area and the image display */
         div[data-testid="stTextArea"] textarea {
-            height: 50px !important;
-            min-height: 50px !important;
+            height: 50px;
+            min-height: 50px;
             }
         </style>
         """,
         unsafe_allow_html=True
     )
 
-    # Define images
-    logo = "logo.png"
+    # Define image
     mri = "mri.jpg"
-    
-    st.logo(logo, size="large")
-    
+      
     st.markdown(
     "<h1 style='text-align: center;'>Schizophrenia Detection from 3D MRI Scans</h1>", 
     unsafe_allow_html=True)
