@@ -123,13 +123,14 @@ def main():
         st.image(mri, width=300)
     
     st.write("")
+    st.write("")
     st.write("Upload a 3D MRI scan in NIfTI format (.nii, .nii.gz, or .zip) to check for schizophrenia.")
-
+    
+    uploaded_file = st.file_uploader("", 
+                                    type=["nii", "nii.gz", "zip"])
     model_path = "resnet50_schizophrenia4.pth"
     model = load_model(model_path)
 
-    uploaded_file = st.file_uploader("", 
-                                     type=["nii", "nii.gz", "zip"])
     if uploaded_file is not None:
         with tempfile.TemporaryDirectory() as temp_dir:
             file_path = os.path.join(temp_dir, uploaded_file.name)
