@@ -116,7 +116,15 @@ def main():
     st.markdown(
     "<h1 style='text-align: center;'>Schizophrenia Detection from 3D MRI Scans</h1>", 
     unsafe_allow_html=True)
-    st.image(mri, width=400)
+    # HTML and CSS to center the image
+    centered_image = f"""
+    <div style="display: flex; justify-content: center;">
+        <img src="{mri}" alt="Centered Image" style="width: 50%;">
+    </div>
+    """
+
+# Display the centered image using st.markdown
+    st.markdown(centered_image, unsafe_allow_html=True)
     
     st.write("")
     st.write("Upload a 3D MRI scan in NIfTI format (.nii, .nii.gz, or .zip) to check for schizophrenia.")
