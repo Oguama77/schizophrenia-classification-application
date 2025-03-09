@@ -86,8 +86,22 @@ def predict(model, input_tensors):
 
 # Streamlit app
 def main():
-    st.title("Schizophrenia Detection from 3D MRI Scans")
-    st.write("Upload a 3D MRI scan in NIfTI format (.nii, .nii.gz, or .zip) to check for schizophrenia.")
+    # Streamlit app setup
+    st.set_page_config(
+        page_title="Schiz-Classification-App",
+        layout="centered",
+        initial_sidebar_state="collapsed",
+    )
+        # Creating columns with custom width ratios
+    col1, col2= st.columns([1, 2])
+
+    # Adding elements to the first column
+    with col1:
+        logo_url = "logo.png"
+        st.image(logo_url, width=60)
+    with col2:
+        st.title("Schizophrenia Detection from 3D MRI Scans")
+        st.write("Upload a 3D MRI scan in NIfTI format (.nii, .nii.gz, or .zip) to check for schizophrenia.")
 
     model_path = "resnet50_schizophrenia4.pth"
     model = load_model(model_path)
